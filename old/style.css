@@ -1,0 +1,101 @@
+@charset "UTF-8";
+/* CSS Document */
+
+
+*{
+	margin:0;
+	padding:0;
+}
+body {
+	background-color: #000;
+}
+#desk {
+	background-image: url(images/desk.gif);
+	background-repeat: no-repeat;
+	height: 900px;
+	width: 100%;
+	position: relative;
+	left: 0px;
+	top: 0px;
+	float: left;
+	overflow: hidden;
+}
+#coffee {
+	background-repeat: no-repeat;
+	position: relative;
+	height: 267px;
+	width: 562px;
+	top: -40px;
+	left: 125px;
+	overflow: hidden;
+}
+#macbook_pro {
+	height: 736px;
+	width: 694px;
+	position: relative;
+	left: -150px;
+	top: -255px;
+	background-repeat: no-repeat;
+	overflow: hidden;
+}
+#cell_phone {
+	background-repeat: no-repeat;
+	height: 256px;
+	width: 229px;
+	position: relative;
+	z-index: 999;
+	top: -870px;
+	left: 315px;
+	overflow: hidden;
+}
+#ipad {
+	background-repeat: no-repeat;
+	height: 498px;
+	width: 485px;
+	position: relative;
+	top: -1385px;
+	left: 410px;
+	overflow: hidden;
+}
+#camera {
+	background-repeat: no-repeat;
+	position: relative;
+	height: 264px;
+	width: 300px;
+	top: -1325px;
+	left: 355px;
+	overflow: hidden;
+}
+#logo_contain {
+	background-repeat: no-repeat;
+	position: absolute;
+	z-index: 999;
+	top: 25px;
+	right: 55px;
+	height: 142px;
+	width: 235px;
+}
+#portfolio_slider {
+	float: left;
+	width: 1000px;
+	height: 530px;
+}
+#photography_slider {
+	float: left;
+	width: 1000px;
+	height: 530px;
+}
+#contact_form {
+	float: left;
+	width: 650px;
+	padding: 0px;
+	margin-top: 16px;
+	margin-left: 16px;
+}
+#services {
+	float: left;
+	width: 612px;
+	padding: 0px;
+	margin-top: 16px;
+	margin-left: 16px;
+}
