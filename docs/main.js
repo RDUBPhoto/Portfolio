@@ -1166,7 +1166,7 @@ class SharedDataService {
         `,
       imageUrl: 'assets/img/works/avendas-370.png',
       images: ['assets/img/works/automotive-dealership-crm/avendas.png', 'assets/img/works/automotive-dealership-crm/avendas-1.png', 'assets/img/works/automotive-dealership-crm/avendas-2.png', 'assets/img/works/automotive-dealership-crm/avendas-3.png', 'assets/img/works/automotive-dealership-crm/avendas-4.jpeg'],
-      tags: ['UX / UI Design & Development'],
+      tags: ['Figma/XD', 'Angular', 'HTML', 'SCSS', 'Bootstrap', 'Azure DevOps', 'Git', 'Confluence', 'Adobe Creative Suite', 'Jira', 'Miro'],
       class: 'col-lg-4 col-md-6 col-sm-6 offset-lg-0 offset-md-3 offset-sm-3'
     }, {
       id: 8,

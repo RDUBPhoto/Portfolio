@@ -180,7 +180,7 @@ export class SharedDataService {
           'assets/img/works/automotive-dealership-crm/avendas-3.png',
           'assets/img/works/automotive-dealership-crm/avendas-4.jpeg',
         ],
-        tags: ['UX / UI Design & Development'],
+        tags: ['Figma/XD', 'Angular', 'HTML', 'SCSS', 'Bootstrap', 'Azure DevOps', 'Git', 'Confluence', 'Adobe Creative Suite', 'Jira', 'Miro'],
         class: 'col-lg-4 col-md-6 col-sm-6 offset-lg-0 offset-md-3 offset-sm-3'  
     },
     {
