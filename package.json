@@ -1,6 +1,6 @@
 {
-  "name": "placid-ng",
-  "version": "1.8.0",
+  "name": "robert-wojtow-portfolio",
+  "version": "1.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -36,6 +36,7 @@
     "@types/jasmine": "~5.1.1",
     "@types/jasminewd2": "~2.0.12",
     "@types/node": "^20.8.8",
+    "angular-cli-ghpages": "^0.6.2",
     "codelyzer": "^6.0.2",
     "jasmine-core": "~5.1.1",
     "jasmine-spec-reporter": "~7.0.0",
