@@ -1,0 +1,14 @@
+.d-table {
+    &.nav2{
+        ul {
+            text-align: left;
+            li {
+                margin-bottom: 9px;
+                color: white;
+                &:first-child {
+                    margin-bottom: 18px;
+                }
+            }
+        }
+    }
+}

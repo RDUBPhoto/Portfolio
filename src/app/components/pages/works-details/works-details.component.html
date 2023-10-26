@@ -1,0 +1,59 @@
+<!-- Start Main Container Area -->
+<div class="main-container">
+    <aside id="placid-aside" class="placid-aside bg-0f1d22">
+        <div class="logo">
+            <a routerLink="/">
+                <img src="assets/img/logo.png" alt="image">
+            </a>
+        </div>
+        <app-navigation></app-navigation>
+    </aside>
+
+    <div id="main-content" class="main-content">
+
+        <div class="responsive-burger-menu">
+            <span class="top-bar"></span>
+            <span class="middle-bar"></span>
+            <span class="bottom-bar"></span>
+        </div>
+
+        <section class="works-details-area bg-0f1d22 ptb-120">
+            <div class="container">
+                <div class="row">
+                    <ng-container *ngIf="project">
+                        <div class="col-lg-6 col-md-6 col-sm-6" *ngFor="let img of project.images">
+                            <div class="works-details-image">
+                                <ng-container *ngIf="isLinkableImage(img); else noLink">
+                                    <a href="https://www.youtube.com/watch?v=iSHhVB0nkBM" target="_blank">
+                                        <img [src]="img" alt="{{ project.title }}">
+                                    </a>
+                                </ng-container>
+                                <ng-template #noLink>
+                                    <img [src]="img" alt="{{ project.title }}">
+                                </ng-template>
+                            </div>
+                        </div>                    
+
+                        <div class="col-lg-12 col-md-12">
+                            <div class="works-details-desc">
+                                <h3>{{ project.title }}</h3>
+                                <div [innerHTML]="project.description"></div>
+                                <div class="works-details-info">
+                                    <div class="single-info-box">
+                                        <h4>Technologies used:</h4>
+                                        <ul>
+                                            <li *ngFor="let tag of project.tags">{{ tag }}</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ng-container>
+                </div>
+            </div>
+        </section>
+
+        <app-footer></app-footer>
+    </div>
+</div>
+<!-- End Main Container Area -->

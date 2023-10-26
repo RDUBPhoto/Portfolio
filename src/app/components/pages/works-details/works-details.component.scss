@@ -1,0 +1,31 @@
+.works-details-image a {
+    position: initial;
+    left: 50%;
+    top: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    width: 65px;
+    height: 65px;
+    line-height: 65px;
+    font-size: 35px;
+    background-color: #c9ab81;
+    border-radius: 50%;
+    text-align: center;
+    color: #ffffff;
+    transition: 0.5s;
+    opacity: inherit;
+    visibility: visible;
+    margin-top: 20px;
+}
+
+.works-details-desc .works-details-info .single-info-box {
+    flex: 0 0 50%;
+    max-width: 50%;
+    h4 {
+        color: #c9ab81;
+    }
+    ul {
+        li {
+            color: white;
+        }
+    }
+}
