@@ -28,7 +28,7 @@ export class HomeOneComponent {
   downloadResume() {
     const link = document.createElement('a');
     link.setAttribute('type', 'hidden');
-    link.href = 'https://rdubphoto.github.io/Portfolio/assets/resume.pdf';
+    link.href = 'https://rdubphoto.github.io/Portfolio/assets/Robert-Wojtow-Resume.pdf';
     link.download = 'Robert-Wojtow_Resume.pdf';
     document.body.appendChild(link);
     link.click();
