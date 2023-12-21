@@ -504,14 +504,14 @@ const _c0 = function (a1) {
 };
 function HomeOneComponent_div_183_Template(rf, ctx) {
   if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](0, "div")(1, "div", 64)(2, "div", 65);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelement"](3, "img", 66)(4, "div", 67)(5, "a", 68);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](0, "div")(1, "div", 57)(2, "div", 58);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelement"](3, "img", 59)(4, "div", 60)(5, "a", 61);
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](6, "div", 69)(7, "h3")(8, "a", 70);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](6, "div", 62)(7, "h3")(8, "a", 63);
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](9);
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]()();
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](10, "ul");
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](11, HomeOneComponent_div_183_li_11_Template, 2, 1, "li", 71);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](11, HomeOneComponent_div_183_li_11_Template, 2, 1, "li", 64);
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]()()()();
   }
   if (rf & 2) {
@@ -529,9 +529,9 @@ function HomeOneComponent_div_183_Template(rf, ctx) {
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("ngForOf", project_r3.tags);
   }
 }
-function HomeOneComponent_div_246_Template(rf, ctx) {
+function HomeOneComponent_div_213_Template(rf, ctx) {
   if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](0, "div", 72);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](0, "div", 65);
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](1, " Message sent successfully! ");
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
   }
@@ -587,9 +587,9 @@ class HomeOneComponent {
   static #_2 = this.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdefineComponent"]({
     type: HomeOneComponent,
     selectors: [["app-home-one"]],
-    decls: 248,
+    decls: 215,
     vars: 5,
-    consts: [[1, "main-container"], ["id", "placid-aside", 1, "placid-aside", "bg-0f1d22"], [1, "logo"], ["routerLink", "/"], ["src", "assets/img/logo.png", "alt", "image"], ["id", "main-content", 1, "main-content"], [1, "responsive-burger-menu"], [1, "top-bar"], [1, "middle-bar"], [1, "bottom-bar"], ["data-jarallax", "{\"speed\": 0.3}", 1, "main-banner", "banner-bg1", "jarallax"], [1, "d-table"], [1, "d-table-cell"], [1, "container"], [1, "main-banner-content"], [1, "mb-4"], [1, "scroll-btn"], ["href", "#about"], [1, "mouse"], ["id", "about", 1, "about-area", "ptb-120"], [1, "section-title"], [1, "sub-title"], [1, "row", "align-items-center"], [1, "col-lg-8", "col-md-12"], [1, "about-content"], [1, "tab", "about-list-tab"], [1, "tabs"], [1, "tab-content"], [1, "tabs-item"], [1, "skills-area"], [1, "row"], [1, "col-lg-3", "col-md-3", "col-sm-6"], [1, "d-flex", "align-items-center", "justify-content-center"], [1, "default-btn", 3, "click"], [1, "experience-area"], [1, "col-lg-6", "col-md-6", "col-sm-6"], [1, "single-experience-box"], [1, "col-lg-4", "col-md-12"], [1, "about-image"], ["src", "assets/img/about-img1.jpg", "alt", "image"], ["id", "portfolio", 1, "works-area", "pt-120", "pb-90"], [3, "class", 4, "ngFor", "ngForOf"], [1, "feedback-area"], [1, "container-fluid"], [1, "col-lg-5", "col-md-12"], ["data-jarallax", "{\"speed\": 0.3}", 1, "feedback-content", "jarallax"], [1, "col-lg-7", "col-md-12"], [1, "feedback-slides-content", "bg-0f1d22"], [1, "feedback-slides", "owl-carousel", "owl-theme"], [1, "single-feedback-item"], [1, "ri-double-quotes-r"], [1, "client-info"], ["id", "contact", 1, "contact-area"], ["data-jarallax", "{\"speed\": 0.3}", 1, "contact-content", "jarallax"], [1, "contact-form", "bg-0f1d22"], [3, "ngSubmit"], ["contactForm", "ngForm"], [1, "col-lg-12", "col-md-12"], [1, "form-group", "mb-3"], ["type", "text", "name", "name", "id", "name", "placeholder", "Enter your name", 1, "form-control", 3, "ngModel", "ngModelChange"], ["type", "email", "name", "email", "id", "email", "placeholder", "Enter your email", 1, "form-control", 3, "ngModel", "ngModelChange"], ["name", "message", "id", "message", "cols", "30", "rows", "5", "placeholder", "Enter your message", 1, "form-control", 3, "ngModel", "ngModelChange"], ["type", "submit", 1, "default-btn"], ["class", "alert alert-success mt-3", "role", "alert", 4, "ngIf"], [1, "single-works-box"], [1, "works-image"], ["alt", "image", 3, "src"], [1, "overlay"], [1, "link-btn", 3, "routerLink"], [1, "works-content"], [3, "routerLink"], [4, "ngFor", "ngForOf"], ["role", "alert", 1, "alert", "alert-success", "mt-3"]],
+    consts: [[1, "main-container"], ["id", "placid-aside", 1, "placid-aside", "bg-0f1d22"], [1, "logo"], ["routerLink", "/"], ["src", "assets/img/logo.png", "alt", "image"], ["id", "main-content", 1, "main-content"], [1, "responsive-burger-menu"], [1, "top-bar"], [1, "middle-bar"], [1, "bottom-bar"], ["data-jarallax", "{\"speed\": 0.3}", 1, "main-banner", "banner-bg1", "jarallax"], [1, "d-table"], [1, "d-table-cell"], [1, "container"], [1, "main-banner-content"], [1, "mb-4"], [1, "scroll-btn"], ["href", "#about"], [1, "mouse"], ["id", "about", 1, "about-area", "ptb-120"], [1, "section-title"], [1, "sub-title"], [1, "row", "align-items-center"], [1, "col-lg-8", "col-md-12"], [1, "about-content"], [1, "tab", "about-list-tab"], [1, "tabs"], [1, "tab-content"], [1, "tabs-item"], [1, "skills-area"], [1, "row"], [1, "col-lg-3", "col-md-3", "col-sm-6"], [1, "d-flex", "align-items-center", "justify-content-center"], [1, "default-btn", 3, "click"], [1, "experience-area"], [1, "col-lg-6", "col-md-6", "col-sm-6"], [1, "single-experience-box"], [1, "col-lg-4", "col-md-12"], [1, "about-image"], ["src", "assets/img/about-img1.jpg", "alt", "image"], ["id", "portfolio", 1, "works-area", "pt-120", "pb-90"], [3, "class", 4, "ngFor", "ngForOf"], ["id", "contact", 1, "contact-area"], [1, "container-fluid"], [1, "col-lg-5", "col-md-12"], ["data-jarallax", "{\"speed\": 0.3}", 1, "contact-content", "jarallax"], [1, "col-lg-7", "col-md-12"], [1, "contact-form", "bg-0f1d22"], [3, "ngSubmit"], ["contactForm", "ngForm"], [1, "col-lg-12", "col-md-12"], [1, "form-group", "mb-3"], ["type", "text", "name", "name", "id", "name", "placeholder", "Enter your name", 1, "form-control", 3, "ngModel", "ngModelChange"], ["type", "email", "name", "email", "id", "email", "placeholder", "Enter your email", 1, "form-control", 3, "ngModel", "ngModelChange"], ["name", "message", "id", "message", "cols", "30", "rows", "5", "placeholder", "Enter your message", 1, "form-control", 3, "ngModel", "ngModelChange"], ["type", "submit", 1, "default-btn"], ["class", "alert alert-success mt-3", "role", "alert", 4, "ngIf"], [1, "single-works-box"], [1, "works-image"], ["alt", "image", 3, "src"], [1, "overlay"], [1, "link-btn", 3, "routerLink"], [1, "works-content"], [3, "routerLink"], [4, "ngFor", "ngForOf"], ["role", "alert", 1, "alert", "alert-success", "mt-3"]],
     template: function HomeOneComponent_Template(rf, ctx) {
       if (rf & 1) {
         const _r6 = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵgetCurrentView"]();
@@ -786,72 +786,44 @@ class HomeOneComponent {
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](183, HomeOneComponent_div_183_Template, 12, 11, "div", 41);
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]()()();
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](184, "section", 42)(185, "div", 43)(186, "div", 30)(187, "div", 44)(188, "div", 45)(189, "div", 11)(190, "div", 12)(191, "div", 20)(192, "span", 21);
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](193, "Testimonials");
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](193, "Let's talk");
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](194, "h2");
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](195, "What my co-workers have said about me");
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](195, "Get in Touch With Me");
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]()()()()()();
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](196, "div", 46)(197, "div", 47)(198, "div", 48)(199, "div", 49);
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelement"](200, "i", 50);
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](201, "p");
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](202, "\u201CI have never worked with a more talented UI/UX developer in my 15 years of software product development. In my experience with Robert, there was never a problem that he could not help formulate a solution for - either individually or through collaboration with other team members.\u201D");
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](203, "div", 51)(204, "h3");
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](205, "Creative Team Player");
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](206, "span");
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](207, "Vice President - Software NCC");
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]()()();
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](208, "div", 49);
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelement"](209, "i", 50);
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](210, "p");
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](211, "\"In over a decade of tech, I've yet to meet a UI/UX professional as dedicated and creative as Robert. His solutions are not just functional, but truly visionary.\"");
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](212, "div", 51)(213, "h3");
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](214, "Dedicated Creative Professional");
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](215, "span");
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](216, "Director - DealerSocket");
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]()()()()()()()()();
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](217, "section", 52)(218, "div", 43)(219, "div", 30)(220, "div", 44)(221, "div", 53)(222, "div", 11)(223, "div", 12)(224, "div", 20)(225, "span", 21);
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](226, "Let's talk");
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](227, "h2");
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](228, "Get in Touch With Me");
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]()()()()()();
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](229, "div", 46)(230, "div", 54)(231, "form", 55, 56);
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵlistener"]("ngSubmit", function HomeOneComponent_Template_form_ngSubmit_231_listener() {
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](196, "div", 46)(197, "div", 47)(198, "form", 48, 49);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵlistener"]("ngSubmit", function HomeOneComponent_Template_form_ngSubmit_198_listener() {
           _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵrestoreView"](_r6);
-          const _r1 = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵreference"](232);
+          const _r1 = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵreference"](199);
           return _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵresetView"](ctx.onSubmit(_r1));
         });
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](233, "div", 30)(234, "div", 57)(235, "div", 58)(236, "input", 59);
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵlistener"]("ngModelChange", function HomeOneComponent_Template_input_ngModelChange_236_listener($event) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](200, "div", 30)(201, "div", 50)(202, "div", 51)(203, "input", 52);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵlistener"]("ngModelChange", function HomeOneComponent_Template_input_ngModelChange_203_listener($event) {
           return ctx.model.name = $event;
         });
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]()()();
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](237, "div", 57)(238, "div", 58)(239, "input", 60);
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵlistener"]("ngModelChange", function HomeOneComponent_Template_input_ngModelChange_239_listener($event) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](204, "div", 50)(205, "div", 51)(206, "input", 53);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵlistener"]("ngModelChange", function HomeOneComponent_Template_input_ngModelChange_206_listener($event) {
           return ctx.model.email = $event;
         });
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]()()();
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](240, "div", 57)(241, "div", 58)(242, "textarea", 61);
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵlistener"]("ngModelChange", function HomeOneComponent_Template_textarea_ngModelChange_242_listener($event) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](207, "div", 50)(208, "div", 51)(209, "textarea", 54);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵlistener"]("ngModelChange", function HomeOneComponent_Template_textarea_ngModelChange_209_listener($event) {
           return ctx.model.message = $event;
         });
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]()()();
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](243, "div", 57)(244, "button", 62);
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](245, "Send Message");
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](210, "div", 50)(211, "button", 55);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](212, "Send Message");
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]()()()();
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](246, HomeOneComponent_div_246_Template, 2, 0, "div", 63);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](213, HomeOneComponent_div_213_Template, 2, 0, "div", 56);
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]()()()()();
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelement"](247, "app-footer");
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelement"](214, "app-footer");
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]()();
       }
       if (rf & 2) {
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](183);
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("ngForOf", ctx.projects);
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](53);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](20);
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("ngModel", ctx.model.name);
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](3);
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("ngModel", ctx.model.email);
