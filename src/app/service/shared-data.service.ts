@@ -108,7 +108,7 @@ export class SharedDataService {
     },
     {
         id: 5,
-        title: 'User Experience ye Testing',
+        title: 'User Experience Prototype Testing',
         description: `
         <p>In my leadership role for the "User Experience Prototype Testing" of DealerSocket's new CRM system, I embarked on a comprehensive journey to revolutionize the user experience. Our objective was to identify pain points in the existing system and deliver a solution that was both intuitive and efficient. Here’s a dive into our meticulous process:</p>
         <ul>
