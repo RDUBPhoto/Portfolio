@@ -52,76 +52,104 @@
                                 performance. My primary objective is to refine your software, overcoming challenges step-by-step 
                                 through in-depth research and technical analysis. Your software's success is my foremost priority.
                             </p>
+                            <!-- Bootstrap Tabs -->
                             <div class="tab about-list-tab">
-                                <ul class="tabs">
-                                    <li>Skills</li>
-                                    <li>Experience</li>
+                                <!-- Nav Tabs -->
+                                <ul class="tabs nav nav-tabs" id="myTab" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                        <a class="nav-link active" id="skills-tab" data-bs-toggle="tab" data-bs-target="#skills" role="tab" aria-controls="skills" aria-selected="true">Skills</a>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <a class="nav-link" id="experience-tab" data-bs-toggle="tab" data-bs-target="#experience" role="tab" aria-controls="experience" aria-selected="false">Experience</a>
+                                    </li>
                                 </ul>
-            
-                                <div class="tab-content">
-                                    <div class="tabs-item">
+
+                                <!-- Tab Content -->
+                                <div class="tab-content" id="myTabContent">
+                                    <!-- Skills Tab -->
+                                    <div class="tab-pane fade show active tabs-item" id="skills" role="tabpanel" aria-labelledby="skills-tab">
                                         <div class="skills-area">
                                             <h3>SOFTWARE & TECHNICAL SKILLS</h3>
                                             <div class="row">
-                                                <!-- First Column of Skills -->
+                                                <!-- First Column - Design Tools -->
                                                 <div class="col-lg-3 col-md-3 col-sm-6">
                                                     <ul>
-                                                        <li>Adobe Product Suite</li>
-                                                        <li>Angular</li>
+                                                        <li>Figma</li>
+                                                        <li>Adobe XD</li>
                                                         <li>Axure</li>
-                                                        <li>Azure DevOps</li>
-                                                        <li>Bootstrap</li>
-                                                    </ul>
-                                                </div>
-                                    
-                                                <!-- Second Column of Skills -->
-                                                <div class="col-lg-3 col-md-3 col-sm-6">
-                                                    <ul>
-                                                        <li>Figma / XD</li>
-                                                        <li>GIT / BitBucket</li>
-                                                        <li>Gulp / Grunt</li>
-                                                        <li>HTML5 & CSS3</li>
-                                                        <li>JavaScript</li>
-                                                    </ul>
-                                                </div>
-                                    
-                                                <!-- Third Column of Skills -->
-                                                <div class="col-lg-3 col-md-3 col-sm-6">
-                                                    <ul>
-                                                        <li>Jira</li>
-                                                        <li>Material UI</li>
-                                                        <li>Mobile Design</li>
-                                                        <li>Node.js</li>
-                                                        <li>React.js</li>
-                                                    </ul>
-                                                </div>
-                                    
-                                                <!-- Fourth Column of Skills -->
-                                                <div class="col-lg-3 col-md-3 col-sm-6">
-                                                    <ul>
-                                                        <li>Responsive Web Design</li>
-                                                        <li>SASS</li>
                                                         <li>Sketch</li>
-                                                        <li>Visual Studio</li>
-                                                        <li>VUE.js</li>
-                                                        <li>WCAG / ADA</li>
+                                                        <li>InVision</li>
+                                                        <li>Adobe Creative Suite</li>
+                                                        <li>Miro</li>
+                                                        <li>HotJar</li>
+                                                        <li>CrazyEgg</li>
+                                                        <li>Design Tokens</li>
                                                     </ul>
                                                 </div>
-                                            </div>
-                                        </div>
-                                        <div class="d-flex align-items-center justify-content-center">
-                                            <button class="default-btn" (click)="downloadResume()">Download My Resume</button>
+                                            
+                                                <!-- Second Column - Development Skills -->
+                                                <div class="col-lg-3 col-md-3 col-sm-6">
+                                                    <ul>
+                                                        <li>HTML5</li>
+                                                        <li>CSS3</li>
+                                                        <li>SCSS</li>
+                                                        <li>JavaScript</li>
+                                                        <li>TypeScript</li>
+                                                        <li>Node.js</li>
+                                                    </ul>
+                                                </div>
+                                            
+                                                <!-- Third Column - Frameworks & Libraries -->
+                                                <div class="col-lg-3 col-md-3 col-sm-6">
+                                                    <ul>
+                                                        <li>React</li>
+                                                        <li>Angular</li>
+                                                        <li>Vue.js</li>
+                                                        <li>Storybook.js</li>
+                                                        <li>Bootstrap</li>
+                                                        <li>Material UI</li>
+                                                        <li>Power BI</li>
+                                                        <li>ChartJS</li>
+                                                    </ul>
+                                                </div>
+                                            
+                                                <!-- Fourth Column - UX & Other Skills -->
+                                                <div class="col-lg-3 col-md-3 col-sm-6">
+                                                    <ul>
+                                                        <li>Usability Testing</li>
+                                                        <li>A/B Testing</li>
+                                                        <li>Journey Mapping</li>
+                                                        <li>Persona Development</li>
+                                                        <li>UX Audit Frameworks</li>
+                                                        <li>Agile Methodologies</li>
+                                                        <li>Responsive Design</li>
+                                                        <li>WCAG Compliance</li>
+                                                        <li>GIT/GitHub</li>
+                                                        <li>Design Systems Development</li>
+                                                        <li>Mobile Design</li>
+                                                    </ul>
+                                                </div>
+                                            </div>                                            
                                         </div>
                                     </div>
 
-                                    <div class="tabs-item">
+                                    <!-- Experience Tab -->
+                                    <div class="tab-pane fade tabs-item" id="experience" role="tabpanel" aria-labelledby="experience-tab">
                                         <div class="experience-area">
                                             <div class="row">
                                                 <div class="col-lg-6 col-md-6 col-sm-6">
                                                     <div class="single-experience-box">
-                                                        <span>September 2017 - Current (Lead UI/UX Designer/Developer and Architect)</span>
+                                                        <span>March 2024 - Jan 2025 (Principle UI/UX Designer and Developer)</span>
+                                                        <h3>Teradata - Contract Role (Remote Position)</h3>
+                                                        <p>I led the development and expansion of the design system, creating base components and building a reusable library for future products. In addition, I designed and implemented new features for the Lakeview product, focusing on front-end development and UX improvements. While addressing backlog tasks, I integrated ad-hoc solutions while maintaining code quality and design integrity. I also conducted UX testing, developed user personas, and built responsive, scalable solutions to ensure cross-product consistency. Throughout the process, I collaborated with various teams to align deliverables with both user needs and technical requirements.</p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                                    <div class="single-experience-box">
+                                                        <span>September 2017 - Jan 2024 (Lead UI/UX Designer/Developer and Architect)</span>
                                                         <h3>Becton Dickinson (Remote Position)</h3>
-                                                        <p>Developed HIPAA & WCAG compliant systems. Enhanced collaboration between engineering and UX. Mentored developers on React and Angular.</p>
+                                                        <p>At Becton Dickinson, I led the development and implementation of a WCAG-compliant design system, ensuring consistency across multiple medical products. I collaborated closely with engineering and product teams to bridge the gap between design and development, creating reusable UI components and scalable design solutions. I played a key role in front-end development, enhancing UX workflows and optimizing interfaces for HIPAA-compliant applications. Additionally, I conducted UX testing, developed user personas, and refined design standards to improve usability and accessibility. My work also involved mentoring developers in React and Angular, fostering a strong collaboration between UX and engineering to drive innovation and efficiency.</p>
                                                     </div>
                                                 </div>
                                                 
@@ -129,60 +157,44 @@
                                                     <div class="single-experience-box">
                                                         <span>March 2017 - September 2017 (Lead UI/UX Designer and Architect)</span>
                                                         <h3>Teradata - Contract Role (Remote Position)</h3>
-                                                        <p>Lead designer for Nebula product. Managed UI design, UX, and product enhancements with stakeholders.</p>
+                                                        <p>At Teradata, I led the UX and front-end development efforts for the Nebula product, designing and implementing key features to enhance usability and workflow efficiency. I played a critical role in the design system, developing reusable components and scalable UI patterns for future products. While addressing backlog tasks, I focused on refining UX elements, improving product accessibility, and maintaining high design integrity. I collaborated closely with stakeholders to ensure deliverables met business goals while aligning with technical feasibility.</p>
                                                     </div>
                                                 </div>
-                                        
+
                                                 <div class="col-lg-6 col-md-6 col-sm-6">
                                                     <div class="single-experience-box">
                                                         <span>Oct. 2015 - Dec. 2016 (Sr. Lead UI/UX Design Manager & Front End Developer)</span>
                                                         <h3>SNH Inc. (NCC Credit), San Diego, CA</h3>
-                                                        <p>Lead for automotive CRM design. Managed UI/UX efforts, and saw design feature on Times Square.</p>
+                                                        <p>At SNH Inc. (NCC Credit), I was the lead UI/UX designer and front-end developer for their automotive credit platform, designing intuitive and high-performing interfaces to improve user workflows. I spearheaded the design system, creating reusable UI components and ensuring brand consistency across applications. My role also involved conducting UX research, usability testing, and optimizing design for mobile and desktop experiences. Additionally, I worked closely with engineering teams to ensure seamless design-to-development handoff while maintaining accessibility and WCAG compliance.</p>
                                                     </div>
                                                 </div>
-                                        
+
                                                 <div class="col-lg-6 col-md-6 col-sm-6">
                                                     <div class="single-experience-box">
                                                         <span>Sept. 2014 - Sept. 2015 (Sr. UI Designer & Front End Developer)</span>
                                                         <h3>ServiceNow, San Diego, CA</h3>
-                                                        <p>Developed style-guides and led design efforts on VTB. Managed iconography font set.</p>
+                                                        <p>At ServiceNow, I played a key role in designing and maintaining the Visual Task Board (VTB), creating intuitive user interfaces that streamlined task management and collaboration. I led the development of style guides and reusable UI components, ensuring consistency across the platform while optimizing for scalability. My work involved designing and refining iconography, improving accessibility, and enhancing user workflows for enterprise users. I collaborated closely with product managers, developers, and stakeholders to align design solutions with business needs while maintaining a strong focus on usability and performance.</p>
                                                     </div>
                                                 </div>
-                                                
+
                                                 <div class="col-lg-6 col-md-6 col-sm-6">
                                                     <div class="single-experience-box">
                                                         <span>July 2013 - Sept 2014 (Sr. UI / UX Designer & Front End Developer)</span>
                                                         <h3>DealerSocket, San Clemente, CA</h3>
-                                                        <p>Redesigned CRM for better UX and worked on mobile-first responsive designs. Completed Scrum Master training.</p>
+                                                        <p>At DealerSocket, I redesigned the automotive CRM system, creating a more user-friendly, responsive, and intuitive interface for dealerships. I played a key role in developing mobile-first designs, ensuring a seamless experience across all devices. I also contributed to the design system, building scalable UI components and improving consistency across products. In addition to UX design, I worked on front-end development, implementing updates and improving performance. My work helped streamline workflows, increase user engagement, and enhance overall product usability.</p>
                                                     </div>
                                                 </div>
-                                        
+
                                                 <div class="col-lg-6 col-md-6 col-sm-6">
                                                     <div class="single-experience-box">
                                                         <span>April 2012 - April 2013 (UI / UX Designer & Front End Developer)</span>
                                                         <h3>MaintenanceNet, Carlsbad, CA</h3>
-                                                        <p>Applied latest tech for ServiceExchange application and ensured up-to-date code for compatibility.</p>
-                                                    </div>
-                                                </div>
-                                        
-                                                <div class="col-lg-6 col-md-6 col-sm-6">
-                                                    <div class="single-experience-box">
-                                                        <span>June 2010 - January 2012 (Sr. Global Web Designer)</span>
-                                                        <h3>Technologies, Hoffman Estates, IL</h3>
-                                                        <p>Managed global websites, UI/UX interfaces, branding strategies, and product announcements.</p>
-                                                    </div>
-                                                </div>
-                                        
-                                                <div class="col-lg-6 col-md-6 col-sm-6">
-                                                    <div class="single-experience-box">
-                                                        <span>Prior Work Experience</span>
-                                                        <h3>Clover</h3>
-                                                        <p>Roles ranging from Designer/Web Developer to Architectural Designer across various firms from 2001-2010.</p>
+                                                        <p>At MaintenanceNet, I designed and developed enterprise software solutions for service and contract management, ensuring an optimal B2B user experience. I was responsible for creating wireframes, prototypes, and high-fidelity UI designs while collaborating with development teams to ensure smooth implementation. I also played a role in optimizing information architecture and user workflows, focusing on efficiency and scalability. Additionally, I ensured UI components were compatible across multiple platforms and met accessibility standards.</p>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> 
                                 </div>
                             </div>
                         </div>
