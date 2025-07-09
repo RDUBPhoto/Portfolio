@@ -1,0 +1,41 @@
+<div class="chat-container d-flex flex-column h-100 p-4">
+  <div class="chat-header mb-3">
+    <h2 class="fw-bold fs-4">Ask My Portfolio</h2>
+  </div>
+
+  <div class="chat-body flex-grow-1 overflow-auto p-3 border bg-light rounded">
+    <div *ngFor="let message of messages" class="mb-3">
+      <div
+        [ngClass]="{
+          'text-end text-primary': message.role === 'user',
+          'text-start text-dark': message.role === 'assistant'
+        }"
+      >
+        {{ message.content }}
+      </div>
+    </div>
+  </div>
+
+  <div class="chat-footer mt-3">
+    <div class="suggestions d-flex flex-wrap gap-2 mb-3">
+      <button
+        *ngFor="let prompt of suggestedPrompts"
+        class="btn btn-outline-secondary rounded-pill px-3 py-1"
+        (click)="usePrompt(prompt)"
+      >
+        {{ prompt }}
+      </button>
+    </div>
+
+    <div class="input-wrapper position-relative d-flex align-items-center">
+      <span class="blinking-cursor position-absolute ps-2 text-muted">|</span>
+      <input
+        type="text"
+        class="form-control ps-4"
+        [(ngModel)]="userInput"
+        placeholder="Ask something like 'Show me your UX process...'"
+        (keyup.enter)="sendMessage()"
+      />
+    </div>
+  </div>
+</div>

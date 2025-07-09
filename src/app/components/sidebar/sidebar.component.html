@@ -1,0 +1,16 @@
+<div class="sidebar" [class.collapsed]="collapsed">
+  <div class="sidebar-header">
+    <button (click)="toggleSidebar()" class="toggle-btn">
+      ☰
+    </button>
+    <span *ngIf="!collapsed">My Portfolio</span>
+  </div>
+
+  <ul class="nav-links">
+    <li><button>Home</button></li>
+    <li><button>UX Process</button></li>
+    <li><button>UI Process</button></li>
+    <li><button>Design Systems</button></li>
+    <li><button>Code Samples</button></li>
+  </ul>
+</div>
