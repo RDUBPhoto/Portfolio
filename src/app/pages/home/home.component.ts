@@ -38,12 +38,12 @@ export class HomeComponent implements AfterViewInit {
   };
 
   readonly companyLogos = [
-    { src: '/scroll-company-logos/Becton_Dickinson_logo.svg', alt: 'Becton Dickinson logo' },
-    { src: '/scroll-company-logos/Cisco_logo.svg', alt: 'Cisco logo' },
-    { src: '/scroll-company-logos/ServiceNow_logo.svg', alt: 'ServiceNow logo' },
-    { src: '/scroll-company-logos/Teradata_logo.svg', alt: 'Teradata logo' },
-    { src: '/scroll-company-logos/VehicleSolutionsDealerSocket.svg', alt: 'Vehicle Solutions DealerSocket logo' },
-    { src: '/scroll-company-logos/riministreet.svg', alt: 'Rimini Street logo' }
+    { src: 'scroll-company-logos/Becton_Dickinson_logo.svg', alt: 'Becton Dickinson logo' },
+    { src: 'scroll-company-logos/Cisco_logo.svg', alt: 'Cisco logo' },
+    { src: 'scroll-company-logos/ServiceNow_logo.svg', alt: 'ServiceNow logo' },
+    { src: 'scroll-company-logos/Teradata_logo.svg', alt: 'Teradata logo' },
+    { src: 'scroll-company-logos/VehicleSolutionsDealerSocket.svg', alt: 'Vehicle Solutions DealerSocket logo' },
+    { src: 'scroll-company-logos/riministreet.svg', alt: 'Rimini Street logo' }
   ];
   readonly loopingCompanyLogos = [...this.companyLogos, ...this.companyLogos];
   readonly designToCodeStages = [
@@ -51,19 +51,19 @@ export class HomeComponent implements AfterViewInit {
       title: '1) Token Source in Figma',
       description:
         'Design tokens are authored and governed in Figma (variables/components), creating a single source of truth for spacing, typography, color, and states.',
-      image: '/ui-examples/RiminiStreet-vistalumina/design system token examples/rimini-tokens.jpg'
+      image: 'ui-examples/RiminiStreet-vistalumina/design system token examples/rimini-tokens.jpg'
     },
     {
       title: '2) Pipeline to Azure DevOps + GitHub',
       description:
         'Tokens are synced through a CI pipeline to source control so every product team consumes the same canonical values and change history.',
-      image: '/ui-examples/RiminiStreet-vistalumina/design system token examples/design-tokens-pipeline-azure.jpg'
+      image: 'ui-examples/RiminiStreet-vistalumina/design system token examples/design-tokens-pipeline-azure.jpg'
     },
     {
       title: '3) Angular Consumption at Scale',
       description:
         'Generated token outputs feed Angular styling/scaffolding so 25 projects stay visually consistent while still supporting product-level extension.',
-      image: '/ui-examples/RiminiStreet-vistalumina/design system token examples/variables-vscode.jpg'
+      image: 'ui-examples/RiminiStreet-vistalumina/design system token examples/variables-vscode.jpg'
     }
   ];
   readonly tokenJsonSnippet = `{

@@ -69,15 +69,15 @@ export class WorkPageComponent implements OnInit, OnChanges {
         'Built reusable UI patterns for charting, workspace states, and approval workflows'
       ],
       images: [
-        '/ui-examples/RiminiStreet-vistalumina/Dashboard_Desktop.jpg',
-        '/ui-examples/RiminiStreet-vistalumina/Workspace%20-%20Desktop.jpg',
-        '/ui-examples/RiminiStreet-vistalumina/Landing%20page-1.jpg',
-        '/ui-examples/RiminiStreet-vistalumina/Chart.jpg',
-        '/ui-examples/RiminiStreet-vistalumina/Chart-1.jpg',
-        '/ui-examples/RiminiStreet-vistalumina/Donut%20Element.jpg',
-        '/ui-examples/RiminiStreet-vistalumina/Widgets.jpg',
-        '/ui-examples/RiminiStreet-vistalumina/Refunded_Desktop.jpg',
-        '/ui-examples/RiminiStreet-vistalumina/Requisition%20Request%20form%20-%20Filling....jpg'
+        'ui-examples/RiminiStreet-vistalumina/Dashboard_Desktop.jpg',
+        'ui-examples/RiminiStreet-vistalumina/Workspace%20-%20Desktop.jpg',
+        'ui-examples/RiminiStreet-vistalumina/Landing%20page-1.jpg',
+        'ui-examples/RiminiStreet-vistalumina/Chart.jpg',
+        'ui-examples/RiminiStreet-vistalumina/Chart-1.jpg',
+        'ui-examples/RiminiStreet-vistalumina/Donut%20Element.jpg',
+        'ui-examples/RiminiStreet-vistalumina/Widgets.jpg',
+        'ui-examples/RiminiStreet-vistalumina/Refunded_Desktop.jpg',
+        'ui-examples/RiminiStreet-vistalumina/Requisition%20Request%20form%20-%20Filling....jpg'
       ]
     },
     {
@@ -97,16 +97,16 @@ export class WorkPageComponent implements OnInit, OnChanges {
         'Built workflow-heavy consoles for usage, cost visibility, and database tooling'
       ],
       images: [
-        '/ui-examples/teradata/teradata1.jpg',
-        '/ui-examples/teradata/teradata2.jpg',
-        '/ui-examples/teradata/teradata3.jpg',
-        '/ui-examples/teradata/teradata4.jpg',
-        '/ui-examples/teradata/teradata5.png',
-        '/ui-examples/teradata/Cost-Calculator-Console---New-Branding.webp',
-        '/ui-examples/teradata/Unit-Consumption-Console---New-Branding.webp',
-        '/ui-examples/teradata/vantage_editor_desktop_1_edit_connections.png',
-        '/ui-examples/teradata/vantage_editor_desktop_2_set_connection_properties.png',
-        '/ui-examples/teradata/vantage_editor_desktop_3_object_browser.png'
+        'ui-examples/teradata/teradata1.jpg',
+        'ui-examples/teradata/teradata2.jpg',
+        'ui-examples/teradata/teradata3.jpg',
+        'ui-examples/teradata/teradata4.jpg',
+        'ui-examples/teradata/teradata5.png',
+        'ui-examples/teradata/Cost-Calculator-Console---New-Branding.webp',
+        'ui-examples/teradata/Unit-Consumption-Console---New-Branding.webp',
+        'ui-examples/teradata/vantage_editor_desktop_1_edit_connections.png',
+        'ui-examples/teradata/vantage_editor_desktop_2_set_connection_properties.png',
+        'ui-examples/teradata/vantage_editor_desktop_3_object_browser.png'
       ]
     },
     {
@@ -126,12 +126,12 @@ export class WorkPageComponent implements OnInit, OnChanges {
         'Led UX audits and legacy UI consolidation to reduce duplication and improve adoption'
       ],
       images: [
-        '/ui-examples/bd/design-system.png',
-        '/ui-examples/bd/design-system-1.png',
-        '/ui-examples/bd/design-system-2.png',
-        '/ui-examples/bd/design-system-3.png',
-        '/ui-examples/bd/design-system-4.png',
-        '/ui-examples/bd/design-system-5.png'
+        'ui-examples/bd/design-system.png',
+        'ui-examples/bd/design-system-1.png',
+        'ui-examples/bd/design-system-2.png',
+        'ui-examples/bd/design-system-3.png',
+        'ui-examples/bd/design-system-4.png',
+        'ui-examples/bd/design-system-5.png'
       ]
     },
     {
@@ -151,12 +151,12 @@ export class WorkPageComponent implements OnInit, OnChanges {
         'Aligned design decisions with accessibility and compliance constraints'
       ],
       images: [
-        '/ui-examples/ehr/ehr1.png',
-        '/ui-examples/ehr/ehr2.png',
-        '/ui-examples/ehr/ehr3.png',
-        '/ui-examples/ehr/ehr4.png',
-        '/ui-examples/ehr/ehr5.png',
-        '/ui-examples/ehr/ehr6.png'
+        'ui-examples/ehr/ehr1.png',
+        'ui-examples/ehr/ehr2.png',
+        'ui-examples/ehr/ehr3.png',
+        'ui-examples/ehr/ehr4.png',
+        'ui-examples/ehr/ehr5.png',
+        'ui-examples/ehr/ehr6.png'
       ]
     },
     {
@@ -176,9 +176,9 @@ export class WorkPageComponent implements OnInit, OnChanges {
         'Emphasized plain-language UX patterns for broader accessibility'
       ],
       images: [
-        '/ui-examples/myhealthevet.gov/myhealthevet1.jpg',
-        '/ui-examples/myhealthevet.gov/myhealthevet2.jpg',
-        '/ui-examples/myhealthevet.gov/myhealthevet3.jpg'
+        'ui-examples/myhealthevet.gov/myhealthevet1.jpg',
+        'ui-examples/myhealthevet.gov/myhealthevet2.jpg',
+        'ui-examples/myhealthevet.gov/myhealthevet3.jpg'
       ]
     },
     {
@@ -198,11 +198,11 @@ export class WorkPageComponent implements OnInit, OnChanges {
         'Improved workflow clarity across inventory, deal flow, and team handoffs'
       ],
       images: [
-        '/ui-examples/NCC-credit/ncc-1.png',
-        '/ui-examples/NCC-credit/ncc-2.png',
-        '/ui-examples/NCC-credit/ncc-3.png',
-        '/ui-examples/NCC-credit/ncc-4.png',
-        '/ui-examples/NCC-credit/ncc-5.jpeg'
+        'ui-examples/NCC-credit/ncc-1.png',
+        'ui-examples/NCC-credit/ncc-2.png',
+        'ui-examples/NCC-credit/ncc-3.png',
+        'ui-examples/NCC-credit/ncc-4.png',
+        'ui-examples/NCC-credit/ncc-5.jpeg'
       ]
     },
     {
@@ -222,11 +222,11 @@ export class WorkPageComponent implements OnInit, OnChanges {
         'Partnered closely with product and engineering for implementation quality'
       ],
       images: [
-        '/ui-examples/ServiceNow/serviceNow1.png',
-        '/ui-examples/ServiceNow/serviceNow2.png',
-        '/ui-examples/ServiceNow/serviceNow3.png',
-        '/ui-examples/ServiceNow/serviceNow4.jpeg',
-        '/ui-examples/ServiceNow/serviceNow5.jpg'
+        'ui-examples/ServiceNow/serviceNow1.png',
+        'ui-examples/ServiceNow/serviceNow2.png',
+        'ui-examples/ServiceNow/serviceNow3.png',
+        'ui-examples/ServiceNow/serviceNow4.jpeg',
+        'ui-examples/ServiceNow/serviceNow5.jpg'
       ]
     },
     {
@@ -246,10 +246,10 @@ export class WorkPageComponent implements OnInit, OnChanges {
         'Improved implementation velocity with reusable front-end patterns'
       ],
       images: [
-        '/ui-examples/dealersocket/dealersocket1.png',
-        '/ui-examples/dealersocket/dealersocket2.jpeg',
-        '/ui-examples/dealersocket/dealersocket3.jpeg',
-        '/ui-examples/dealersocket/dealersocket4.jpeg'
+        'ui-examples/dealersocket/dealersocket1.png',
+        'ui-examples/dealersocket/dealersocket2.jpeg',
+        'ui-examples/dealersocket/dealersocket3.jpeg',
+        'ui-examples/dealersocket/dealersocket4.jpeg'
       ]
     },
     {
@@ -269,8 +269,8 @@ export class WorkPageComponent implements OnInit, OnChanges {
         'Delivered UI assets aligned with sales, support, and marketing usage'
       ],
       images: [
-        '/ui-examples/maintainence-net/484327.avif',
-        '/ui-examples/maintainence-net/screen-shot-2015-07-07-at-9-40-28-am.webp'
+        'ui-examples/maintainence-net/484327.avif',
+        'ui-examples/maintainence-net/screen-shot-2015-07-07-at-9-40-28-am.webp'
       ]
     },
     {
@@ -290,14 +290,14 @@ export class WorkPageComponent implements OnInit, OnChanges {
         'Focused on trust signals, comprehension, and guided action'
       ],
       images: [
-        '/ui-examples/TrowePrice/Accounts%20%26%20assets.jpg',
-        '/ui-examples/TrowePrice/Quick%20Start%20Option%202-B.jpg',
-        '/ui-examples/TrowePrice/Quick%20Start%20Option%202-B-1.jpg',
-        '/ui-examples/TrowePrice/Quick%20Start%20Option%202-B-2.jpg',
-        '/ui-examples/TrowePrice/Quiz%20-%20Single%20-%20Step%2013.jpg',
-        '/ui-examples/TrowePrice/Quiz%20-%20Single%20-%20Step%2013-2.jpg',
-        '/ui-examples/TrowePrice/Spending%20goals.jpg',
-        '/ui-examples/TrowePrice/Wages%20and%20contributions%20-%20%25%20of%20annual.jpg'
+        'ui-examples/TrowePrice/Accounts%20%26%20assets.jpg',
+        'ui-examples/TrowePrice/Quick%20Start%20Option%202-B.jpg',
+        'ui-examples/TrowePrice/Quick%20Start%20Option%202-B-1.jpg',
+        'ui-examples/TrowePrice/Quick%20Start%20Option%202-B-2.jpg',
+        'ui-examples/TrowePrice/Quiz%20-%20Single%20-%20Step%2013.jpg',
+        'ui-examples/TrowePrice/Quiz%20-%20Single%20-%20Step%2013-2.jpg',
+        'ui-examples/TrowePrice/Spending%20goals.jpg',
+        'ui-examples/TrowePrice/Wages%20and%20contributions%20-%20%25%20of%20annual.jpg'
       ]
     }
   ];
