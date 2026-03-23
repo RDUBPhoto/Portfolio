@@ -87,6 +87,16 @@ export class AiChatService {
       };
     }
 
+    const faqMatch = PORTFOLIO_AI_CONTEXT.faqAnswers.find(item => this.matchesAny(input, item.keywords));
+    if (faqMatch) {
+      return {
+        filter: faqMatch.filter,
+        relatedProjectIds: [...faqMatch.relatedProjectIds],
+        response: faqMatch.response,
+        restricted: false
+      };
+    }
+
     if (this.matchesAny(input, [...PORTFOLIO_AI_CONTEXT.personalKeywords])) {
       return {
         filter: 'all',

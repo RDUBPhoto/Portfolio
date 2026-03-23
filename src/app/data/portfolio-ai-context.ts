@@ -53,6 +53,51 @@ export const PORTFOLIO_AI_CONTEXT = {
     'Interests: golfing, high-speed off-roading, family, baseball, travel.',
     'Travel references include: Playa del Carmen, Cancun, Baja Mexico, California, Arizona, New Mexico, Texas, Ohio, New England down to Pennsylvania, Washington, NYC, Canada, Florida, North Carolina, Georgia, Louisiana, Alaska, Tennessee, Kentucky, Indiana, Colorado, Nevada, Nebraska, Michigan, Mississippi, Alabama.'
   ],
+  faqAnswers: [
+    {
+      key: 'work-style',
+      keywords: [
+        'what is robert like to work with',
+        'what is he like to work with',
+        'working with robert',
+        'work with him',
+        'team player',
+        'collaborative'
+      ],
+      response:
+        'Robert is known as a calm, high-ownership teammate who bridges UX, product, and engineering without handoff friction. He listens first, frames problems clearly, and then drives practical decisions that teams can ship. Partners value him for raising quality while keeping momentum, especially in complex, high-pressure enterprise environments.',
+      filter: 'all',
+      relatedProjectIds: ['rimini', 'teradata', 'bd', 'servicenow']
+    },
+    {
+      key: 'design-system-wins',
+      keywords: [
+        'biggest design systems wins',
+        'design systems wins',
+        'design system impact',
+        'design system accomplishments',
+        'what did he do with design systems'
+      ],
+      response:
+        'His biggest design systems wins include leading multi-brand token architectures at Teradata and BD, standardizing reusable Angular component libraries, and tightening design-to-code consistency across distributed teams. At enterprise scale, this reduced UI duplication, improved accessibility alignment, and accelerated delivery across many product surfaces.',
+      filter: 'design-systems',
+      relatedProjectIds: ['teradata', 'bd', 'rimini']
+    },
+    {
+      key: 'engineering-partnership',
+      keywords: [
+        'how does he partner with engineering',
+        'partner with engineering',
+        'works with engineering',
+        'collaborate with engineers',
+        'design to dev handoff'
+      ],
+      response:
+        'Robert partners with engineering through shared artifacts and shared accountability: tokenized foundations, reusable component specs, Storybook-ready patterns, and implementation checkpoints built into delivery. He translates UX intent into production-ready detail, aligns early on technical constraints, and stays hands-on through release so quality survives handoff.',
+      filter: 'angular-front-end',
+      relatedProjectIds: ['teradata', 'bd', 'servicenow', 'dealersocket']
+    }
+  ],
   additionalPromptHints: [
     'When asked about design-to-code, mention token pipelines from Figma to source control and Angular usage across multiple products.',
     'When asked about leadership, highlight cross-functional collaboration with product, engineering, operations, and clinical stakeholders.',
