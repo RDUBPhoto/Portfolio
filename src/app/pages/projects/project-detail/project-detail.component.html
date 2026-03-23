@@ -1,0 +1,32 @@
+<div class="project-detail" *ngIf="project">
+  <section class="project-content">
+    <a routerLink="/" class="back-home" aria-label="Back to home">
+      <span class="arrow">←</span>
+      <span>Home</span>
+    </a>
+
+    <p class="kicker">Matched Project Example</p>
+    <h1>{{ project.title }}</h1>
+    <p class="category">{{ project.category }}</p>
+    <p class="description">{{ project.description }}</p>
+
+    <div class="tag-list">
+      <span *ngFor="let tag of project.tags">{{ tag }}</span>
+    </div>
+
+    <div class="gallery-grid">
+      <img
+        *ngFor="let image of project.images; let i = index"
+        [src]="image"
+        [gallery]="'lightbox'"
+        [lightbox]="i"
+        class="gallery-image"
+        alt="{{ project.title }} screenshot"
+      />
+    </div>
+  </section>
+
+  <aside class="project-chat-dock">
+    <app-chat mode="dock" [initialPrompt]="initialPrompt"></app-chat>
+  </aside>
+</div>

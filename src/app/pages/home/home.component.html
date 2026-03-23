@@ -1,4 +1,293 @@
-<div class="layout-container">
-  <app-sidebar></app-sidebar>
-  <app-chat></app-chat>
-</div>
+<main class="home-page">
+  <svg class="vector-field" viewBox="0 0 1440 900" aria-hidden="true" preserveAspectRatio="xMidYMid slice">
+    <defs>
+      <linearGradient id="vectorStrokeA" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#5b4d42" stop-opacity="0.09" />
+        <stop offset="50%" stop-color="#5b4d42" stop-opacity="0.24" />
+        <stop offset="100%" stop-color="#5b4d42" stop-opacity="0.09" />
+      </linearGradient>
+      <linearGradient id="vectorStrokeB" x1="0%" y1="100%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#5b4d42" stop-opacity="0.07" />
+        <stop offset="100%" stop-color="#5b4d42" stop-opacity="0.2" />
+      </linearGradient>
+    </defs>
+
+    <g class="vector-paths vector-slow">
+      <path d="M-40 700 C 220 620, 360 760, 620 680 S 1110 530, 1510 640" />
+      <path d="M-80 520 C 180 460, 350 590, 590 520 S 1050 360, 1520 460" />
+      <path d="M-60 360 C 220 300, 390 430, 640 360 S 1070 210, 1510 300" />
+    </g>
+
+    <g class="vector-paths vector-fast">
+      <path d="M-120 820 C 170 740, 360 860, 660 790 S 1110 620, 1550 740" />
+      <path d="M-100 250 C 140 190, 340 300, 600 240 S 1040 110, 1520 190" />
+    </g>
+  </svg>
+
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
+
+  <header class="top-nav">
+    <div class="brand-cluster">
+      <button
+        class="menu-orb"
+        type="button"
+        aria-label="Open menu"
+        [attr.aria-expanded]="mobileMenuOpen"
+        (click)="toggleMobileMenu()"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <a class="brand" href="#top" aria-label="Go to top" (click)="scrollToSection('top', $event)">
+        <img class="brand-mark" src="/logo.svg" alt="R. Dub logo" />
+      </a>
+    </div>
+
+    <nav aria-label="Primary navigation">
+      <ul class="nav-links">
+        <li><a href="#work-catalogue" (click)="scrollToSection('work-catalogue', $event)">Work</a></li>
+        <li><a href="#design-proof" (click)="scrollToSection('design-proof', $event)">Design-to-Code</a></li>
+        <li><a href="#case-studies" (click)="scrollToSection('case-studies', $event)">Case Studies</a></li>
+        <li><a href="#contact" (click)="scrollToSection('contact', $event)">Contact</a></li>
+        <li>
+          <a href="/Robert%20Wojtow%20Resume%20(2025).pdf" download="Robert-Wojtow-Resume-2025.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="mobile-nav-overlay" *ngIf="mobileMenuOpen" (click)="closeMobileMenu()">
+    <nav class="mobile-nav-panel" aria-label="Mobile navigation" (click)="$event.stopPropagation()">
+      <button class="mobile-nav-close" type="button" (click)="closeMobileMenu()" aria-label="Close menu">✕</button>
+      <a href="#work-catalogue" (click)="scrollToSection('work-catalogue', $event)">Work</a>
+      <a href="#design-proof" (click)="scrollToSection('design-proof', $event)">Design-to-Code</a>
+      <a href="#case-studies" (click)="scrollToSection('case-studies', $event)">Case Studies</a>
+      <a href="#contact" (click)="scrollToSection('contact', $event)">Contact</a>
+      <a
+        href="/Robert%20Wojtow%20Resume%20(2025).pdf"
+        download="Robert-Wojtow-Resume-2025.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        (click)="closeMobileMenu()"
+      >
+        Resume
+      </a>
+    </nav>
+  </div>
+
+  <section id="top" class="hero">
+    <p class="eyebrow">Principle UI/UX Designer + Front-End Developer + Design Systems Expert</p>
+    <h1>
+      Design intelligence
+      <span>you can ask.</span>
+    </h1>
+    <p class="hero-copy">
+      12+ years designing and developing enterprise products in SaaS, healthcare, and regulated environments.
+    </p>
+  </section>
+
+  <section id="work" class="chat-zone">
+    <app-chat mode="hero" (openWork)="onOpenWork($event)"></app-chat>
+  </section>
+
+  <section id="work-catalogue" #workCatalogueSection class="work-catalogue-section">
+    <app-work-page
+      [embedded]="true"
+      [externalFilter]="selectedWorkFilter"
+      [externalPrompt]="selectedPrompt"
+      [externalAgentReply]="selectedAgentReply"
+    ></app-work-page>
+  </section>
+
+  <section id="design-proof" #designProofSection class="design-proof-section">
+    <header class="design-proof-head">
+      <p class="design-proof-kicker">Design To Code Proof</p>
+      <h2>Figma tokens to Angular at enterprise scale.</h2>
+      <p>
+        RiminiStreet workflow: token governance in Figma, automated sync via Azure DevOps/GitHub, and standardized
+        Angular consumption across 25 projects.
+      </p>
+    </header>
+
+    <div class="design-proof-grid">
+      <article class="design-proof-card" *ngFor="let stage of designToCodeStages">
+        <img [src]="stage.image" [alt]="stage.title" />
+        <h3>{{ stage.title }}</h3>
+        <p>{{ stage.description }}</p>
+      </article>
+    </div>
+
+    <div class="code-proof-grid">
+      <article class="code-proof-card">
+        <h3>Token Example (Source)</h3>
+        <pre><code>{{ tokenJsonSnippet }}</code></pre>
+      </article>
+      <article class="code-proof-card">
+        <h3>Angular Usage (Generated + Consumed)</h3>
+        <pre><code>{{ angularTokenSnippet }}</code></pre>
+      </article>
+    </div>
+  </section>
+
+  <section id="case-studies" #caseStudiesSection class="case-studies-section">
+    <header class="case-studies-head">
+      <p class="case-studies-kicker">Case Studies</p>
+      <h2>Selected case studies across AI, design systems, healthcare, and enterprise UX.</h2>
+      <p>
+        Resume-aligned snapshots of shipped work, focused on the problem, approach, and product impact.
+      </p>
+    </header>
+
+    <div class="case-studies-grid">
+      <article class="case-study-card" *ngFor="let study of caseStudies">
+        <p class="study-company">{{ study.company }}</p>
+        <h3>{{ study.title }}</h3>
+        <p><strong>Challenge:</strong> {{ study.challenge }}</p>
+        <p><strong>Approach:</strong> {{ study.approach }}</p>
+        <p><strong>Outcome:</strong> {{ study.outcome }}</p>
+        <div class="study-tags">
+          <span *ngFor="let tag of study.tags">{{ tag }}</span>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="contact" #contactSection class="contact-section">
+    <div class="contact-shell">
+      <header class="contact-head">
+        <p class="contact-kicker">Contact</p>
+        <h2>Let&apos;s build something useful.</h2>
+        <p>
+          Have a project, contract role, or product challenge in mind? Send a quick message and Robert will respond by
+          email.
+        </p>
+      </header>
+
+      <div class="contact-grid">
+        <div class="contact-details">
+          <a class="contact-card" href="mailto:RDUBPhoto@gmail.com">
+            <span class="contact-icon">✉</span>
+            <div>
+              <h3>Email</h3>
+              <p>RDUBPhoto&#64;gmail.com</p>
+            </div>
+          </a>
+
+          <a class="contact-card" href="https://www.linkedin.com/in/robertwojtow" target="_blank" rel="noopener noreferrer">
+            <span class="contact-icon">in</span>
+            <div>
+              <h3>LinkedIn</h3>
+              <p>Connect and message directly</p>
+            </div>
+          </a>
+
+          <div class="contact-card">
+            <span class="contact-icon">📍</span>
+            <div>
+              <h3>Location</h3>
+              <p>Texas, United States</p>
+            </div>
+          </div>
+        </div>
+
+        <form class="contact-form" (submit)="submitContactForm(); $event.preventDefault()">
+          <div class="contact-alert success" *ngIf="contactStatus === 'success'">
+            Message sent successfully. Robert will get back to you soon.
+          </div>
+
+          <div class="contact-alert error" *ngIf="contactStatus === 'error'">
+            Couldn&apos;t send message right now. Please try again in a moment.
+          </div>
+
+          <div class="field-row">
+            <label for="contactName">Name</label>
+            <input
+              id="contactName"
+              type="text"
+              name="name"
+              [(ngModel)]="contactForm.name"
+              required
+              [disabled]="isSubmittingContact"
+            />
+          </div>
+
+          <div class="field-row">
+            <label for="contactEmail">Email</label>
+            <input
+              id="contactEmail"
+              type="email"
+              name="email"
+              [(ngModel)]="contactForm.email"
+              required
+              [disabled]="isSubmittingContact"
+            />
+          </div>
+
+          <div class="field-row">
+            <label for="contactSubject">Subject</label>
+            <input
+              id="contactSubject"
+              type="text"
+              name="subject"
+              [(ngModel)]="contactForm.subject"
+              required
+              [disabled]="isSubmittingContact"
+            />
+          </div>
+
+          <div class="field-row">
+            <label for="contactMessage">Message</label>
+            <textarea
+              id="contactMessage"
+              name="message"
+              rows="5"
+              [(ngModel)]="contactForm.message"
+              required
+              [disabled]="isSubmittingContact"
+            ></textarea>
+          </div>
+
+          <button type="submit" class="contact-submit" [disabled]="isSubmittingContact">
+            {{ isSubmittingContact ? 'Sending...' : 'Send Message' }}
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="home-footer">
+    <p class="copyright">RDUBPhoto Copyright {{ currentYear }}</p>
+    <div class="company-marquee footer-marquee" aria-label="Companies worked with">
+      <div class="marquee-track">
+        <img *ngFor="let logo of loopingCompanyLogos" [src]="logo.src" [alt]="logo.alt" />
+      </div>
+    </div>
+    <a
+      class="linkedin-logo-wrap"
+      href="https://www.linkedin.com/in/robertwojtow"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Visit Robert Wojtow on LinkedIn"
+    >
+      <img src="/LI-Logo.svg" alt="LinkedIn logo" class="linkedin-logo" />
+    </a>
+  </footer>
+
+  <div class="chat-widget" [class.open]="chatWidgetOpen" *ngIf="showChatWidget">
+    <button
+      type="button"
+      class="chat-widget-toggle"
+      (click)="toggleChatWidget()"
+      [attr.aria-label]="chatWidgetOpen ? 'Close AI chat' : 'Open AI chat'"
+    >
+      {{ chatWidgetOpen ? 'Close Chat' : 'Ask AI' }}
+    </button>
+
+    <div class="chat-widget-panel" *ngIf="chatWidgetOpen">
+      <app-chat mode="widget" (openWork)="onOpenWork($event)"></app-chat>
+    </div>
+  </div>
+</main>

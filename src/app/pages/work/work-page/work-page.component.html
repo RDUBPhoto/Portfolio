@@ -1,0 +1,96 @@
+<main class="work-page" [class.embedded]="embedded">
+  <div class="work-bg" aria-hidden="true"></div>
+
+  <header class="work-header" *ngIf="!embedded">
+    <a class="back-home" routerLink="/" aria-label="Back to home">
+      <span class="back-arrow">←</span>
+      <span>Home</span>
+    </a>
+    <a class="brand-link" routerLink="/" aria-label="R.Dub Home">
+      <img src="/logo.svg" alt="R. Dub logo" />
+    </a>
+  </header>
+
+  <section class="work-intro" [class.embedded-intro]="embedded">
+    <p class="eyebrow">Work Catalogue</p>
+    <h1>Persona-driven UI and product execution across enterprise teams.</h1>
+    <p>
+      Ask the portfolio AI anything about Robert's work or background. It will only answer career + personal profile
+      questions and will map your prompt to relevant work examples.
+    </p>
+  </section>
+
+  <section class="filter-bar" aria-label="Work filters">
+    <button
+      type="button"
+      *ngFor="let option of filterOptions"
+      [class.is-active]="activeFilter === option.key"
+      (click)="setFilter(option.key)"
+    >
+      {{ option.label }}
+    </button>
+  </section>
+
+  <section class="work-layout" [class.work-layout-embedded]="embedded">
+    <div class="work-catalogue" aria-label="UI work examples">
+      <article class="work-item" *ngFor="let entry of filteredEntries; let i = index" [class.is-reverse]="i % 2 === 1">
+        <div class="work-visuals">
+          <button
+            class="hero-shot-button"
+            type="button"
+            (click)="openModal(entry, activeImageIndexByEntryId[entry.id])"
+            [attr.aria-label]="'Open larger image for ' + entry.company"
+          >
+            <img class="hero-shot" [src]="getActiveImage(entry)" [alt]="entry.company + ' UI example'" />
+          </button>
+
+          <div class="thumb-grid">
+            <button
+              type="button"
+              class="thumb-button"
+              *ngFor="let image of entry.images; let imageIndex = index"
+              [class.is-active]="isActiveImage(entry, imageIndex)"
+              (click)="setActiveImage(entry, imageIndex)"
+              [attr.aria-label]="'Show image ' + (imageIndex + 1) + ' for ' + entry.company"
+            >
+              <img [src]="image" [alt]="entry.company + ' additional UI ' + (imageIndex + 1)" />
+            </button>
+          </div>
+        </div>
+
+        <div class="work-content">
+          <p class="entry-category">{{ entry.category }}</p>
+          <h2>{{ entry.company }}</h2>
+          <p class="entry-title">{{ entry.title }}</p>
+          <p class="entry-role">{{ entry.role }} | {{ entry.timeframe }}</p>
+          <p class="entry-summary">{{ entry.summary }}</p>
+          <p class="entry-persona"><strong>Persona UX:</strong> {{ entry.personaFocus }}</p>
+
+          <ul>
+            <li *ngFor="let point of entry.highlights">{{ point }}</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+
+    <aside class="work-agent-panel" *ngIf="!embedded">
+      <app-chat mode="dock" [initialPrompt]="queryPrompt" [initialAssistantMessage]="agentReply"></app-chat>
+    </aside>
+  </section>
+
+  <div class="gallery-modal" *ngIf="modalEntryId !== null" (click)="closeModal()" role="dialog" aria-modal="true">
+    <div class="gallery-dialog" (click)="$event.stopPropagation()">
+      <button type="button" class="modal-close" (click)="closeModal()" aria-label="Close image viewer">✕</button>
+
+      <button type="button" class="modal-nav modal-nav-left" (click)="previousModalImage()" aria-label="Previous image">
+        ‹
+      </button>
+
+      <img class="modal-image" [src]="getModalImage()" [alt]="getModalCompany() + ' enlarged UI example'" />
+
+      <button type="button" class="modal-nav modal-nav-right" (click)="nextModalImage()" aria-label="Next image">
+        ›
+      </button>
+    </div>
+  </div>
+</main>

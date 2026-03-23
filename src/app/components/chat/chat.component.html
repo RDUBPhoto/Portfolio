@@ -1,41 +1,108 @@
-<div class="chat-container d-flex flex-column h-100 p-4">
-  <div class="chat-header mb-3">
-    <h2 class="fw-bold fs-4">Ask My Portfolio</h2>
-  </div>
+<section
+  class="chat-shell"
+  [class.chat-shell-hero]="mode === 'hero'"
+  [class.chat-shell-dock]="mode === 'dock'"
+  [class.chat-shell-widget]="mode === 'widget'"
+>
+  <header class="chat-header">
+    <h2>Ask my portfolio AI</h2>
+  </header>
 
-  <div class="chat-body flex-grow-1 overflow-auto p-3 border bg-light rounded">
-    <div *ngFor="let message of messages" class="mb-3">
-      <div
-        [ngClass]="{
-          'text-end text-primary': message.role === 'user',
-          'text-start text-dark': message.role === 'assistant'
-        }"
+  <ng-container *ngIf="mode === 'hero'; else dockLayout">
+    <div #chatBody class="chat-body hero-chat-body" [class.has-messages]="messages.length > 0">
+      <article
+        *ngFor="let message of messages"
+        class="message"
+        [class.user]="message.role === 'user'"
+        [class.assistant]="message.role === 'assistant'"
       >
-        {{ message.content }}
-      </div>
-    </div>
-  </div>
+        <span>{{ message.content }}</span>
+        <button
+          *ngIf="message.role === 'assistant' && message.action"
+          type="button"
+          class="message-action-link"
+          (click)="runMessageAction(message)"
+        >
+          {{ message.action.label }}
+        </button>
+      </article>
 
-  <div class="chat-footer mt-3">
-    <div class="suggestions d-flex flex-wrap gap-2 mb-3">
+      <article *ngIf="loading" class="message assistant typing">
+        <span></span><span></span><span></span>
+      </article>
+    </div>
+
+    <form class="prompt-wrap" (submit)="sendMessage(); $event.preventDefault()">
+      <input
+        type="text"
+        [(ngModel)]="userInput"
+        name="prompt"
+        placeholder="Ask something like ‘Show me your healthcare UX case studies.’"
+        (keyup.enter)="sendMessage()"
+        [disabled]="loading"
+        aria-label="Ask portfolio assistant"
+      />
+      <button type="submit" [disabled]="loading || !userInput.trim()">Ask</button>
+    </form>
+
+    <div class="suggestions suggestions-stack">
       <button
         *ngFor="let prompt of suggestedPrompts"
-        class="btn btn-outline-secondary rounded-pill px-3 py-1"
         (click)="usePrompt(prompt)"
+        [disabled]="loading"
+        type="button"
+      >
+        {{ prompt }}
+      </button>
+    </div>
+  </ng-container>
+
+  <ng-template #dockLayout>
+    <div #chatBody class="chat-body" [class.has-messages]="messages.length > 0">
+      <article
+        *ngFor="let message of messages"
+        class="message"
+        [class.user]="message.role === 'user'"
+        [class.assistant]="message.role === 'assistant'"
+      >
+        <span>{{ message.content }}</span>
+        <button
+          *ngIf="message.role === 'assistant' && message.action"
+          type="button"
+          class="message-action-link"
+          (click)="runMessageAction(message)"
+        >
+          {{ message.action.label }}
+        </button>
+      </article>
+
+      <article *ngIf="loading" class="message assistant typing">
+        <span></span><span></span><span></span>
+      </article>
+    </div>
+
+    <div class="suggestions suggestions-dock">
+      <button
+        *ngFor="let prompt of suggestedPrompts"
+        (click)="usePrompt(prompt)"
+        [disabled]="loading"
+        type="button"
       >
         {{ prompt }}
       </button>
     </div>
 
-    <div class="input-wrapper position-relative d-flex align-items-center">
-      <span class="blinking-cursor position-absolute ps-2 text-muted">|</span>
+    <form class="prompt-wrap prompt-wrap-dock" (submit)="sendMessage(); $event.preventDefault()">
       <input
         type="text"
-        class="form-control ps-4"
         [(ngModel)]="userInput"
-        placeholder="Ask something like 'Show me your UX process...'"
+        name="promptDock"
+        placeholder="Ask a follow-up question..."
         (keyup.enter)="sendMessage()"
+        [disabled]="loading"
+        aria-label="Ask portfolio assistant"
       />
-    </div>
-  </div>
-</div>
+      <button type="submit" [disabled]="loading || !userInput.trim()">Ask</button>
+    </form>
+  </ng-template>
+</section>

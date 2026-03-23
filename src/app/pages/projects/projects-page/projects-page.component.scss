@@ -1,0 +1,20 @@
+.back-home {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin-bottom: 0.9rem;
+  text-decoration: none;
+  color: #5b4d42;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.back-home .arrow {
+  font-size: 2rem;
+  line-height: 1;
+  color: #d8700b;
+}
+
+.projects-page {
+  min-height: 100dvh;
+}
