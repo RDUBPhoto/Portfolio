@@ -5,8 +5,10 @@ import { RouterModule } from '@angular/router';
 import { WorkPageComponent } from '../work/work-page/work-page.component';
 import { WorkFilterKey } from '../../services/ai-chat.service';
 import { FormsModule } from '@angular/forms';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { environment } from '../../../environments/environment';
+import { catchError } from 'rxjs/operators';
+import { throwError, Observable } from 'rxjs';
 
 @Component({
   selector: 'app-home',
@@ -36,6 +38,7 @@ export class HomeComponent implements AfterViewInit {
     subject: '',
     message: ''
   };
+  private readonly formSubmitEndpoint = 'https://formsubmit.co/ajax/RDUBPhoto@gmail.com';
 
   readonly companyLogos = [
     { src: 'scroll-company-logos/Becton_Dickinson_logo.svg', alt: 'Becton Dickinson logo' },
@@ -206,7 +209,35 @@ export class HomeComponent implements AfterViewInit {
     this.isSubmittingContact = true;
     this.contactStatus = 'idle';
 
-    this.http.post(`${environment.apiUrl}/api/contact`, payload).subscribe({
+    const sendViaFormSubmit = (): Observable<unknown> =>
+      this.http.post(
+        this.formSubmitEndpoint,
+        {
+          ...payload,
+          _subject: `Portfolio contact: ${payload.subject}`,
+          _captcha: 'false',
+          _template: 'table'
+        },
+        {
+          headers: {
+            Accept: 'application/json'
+          }
+        }
+      );
+
+    const request$ = environment.production
+      ? sendViaFormSubmit()
+      : this.http.post(`${environment.apiUrl}/api/contact`, payload).pipe(
+          catchError((error: HttpErrorResponse) => {
+            if (error.status === 404) {
+              return this.http.post(`${environment.apiUrl}/contact`, payload);
+            }
+            return throwError(() => error);
+          }),
+          catchError(() => sendViaFormSubmit())
+        );
+
+    request$.subscribe({
       next: () => {
         this.isSubmittingContact = false;
         this.contactStatus = 'success';
