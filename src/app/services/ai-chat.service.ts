@@ -223,7 +223,7 @@ export class AiChatService {
     };
   }
 
-  private matchesAny(input: string, terms: string[]): boolean {
+  private matchesAny(input: string, terms: readonly string[]): boolean {
     return terms.some(term => input.includes(term));
   }
 
