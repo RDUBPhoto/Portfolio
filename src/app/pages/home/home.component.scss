@@ -1,5 +1,6 @@
 .home-page {
   --content-max-width: 1220px;
+  --chat-panel-width: 380px;
 }
 
 .home-page {
@@ -14,6 +15,11 @@
     radial-gradient(circle at 82% 0%, rgba(91, 77, 66, 0.05), transparent 35%),
     linear-gradient(160deg, #f8f3eb 5%, #f6f0e7 46%, #f3ece2 100%);
   overflow: visible;
+  transition: padding-right 220ms ease;
+}
+
+.home-page.with-chat-panel {
+  padding-right: calc(2.5rem + var(--chat-panel-width) + 1.15rem);
 }
 
 .vector-field {
@@ -297,6 +303,29 @@ h1 span {
 .chat-widget-panel {
   width: min(388px, calc(100vw - 1.2rem));
   max-height: min(560px, calc(100dvh - 1.4rem));
+}
+
+@media (min-width: 901px) {
+  .chat-widget {
+    top: 5.9rem;
+    bottom: 4.2rem;
+    width: var(--chat-panel-width);
+    right: 0.95rem;
+    display: grid;
+    grid-template-rows: auto minmax(0, 1fr);
+    gap: 0.55rem;
+    justify-items: stretch;
+  }
+
+  .chat-widget-toggle {
+    justify-self: end;
+  }
+
+  .chat-widget-panel {
+    width: 100%;
+    height: 100%;
+    max-height: none;
+  }
 }
 
 .company-marquee {
@@ -781,6 +810,10 @@ h1 span {
     padding: 0.9rem 2rem 1rem;
   }
 
+  .home-page.with-chat-panel {
+    padding-right: calc(2rem + var(--chat-panel-width) + 1rem);
+  }
+
   .top-nav {
     margin-bottom: 1.2rem;
   }
@@ -865,6 +898,10 @@ h1 span {
 
   .home-page {
     padding: 1.4rem 1.1rem 8rem;
+  }
+
+  .home-page.with-chat-panel {
+    padding-right: 1.1rem;
   }
 
   .vector-field {
