@@ -306,7 +306,7 @@ export class WorkPageComponent implements OnInit, OnChanges {
 
   private readonly filterToProjectIds: Record<Exclude<WorkFilterKey, 'all'>, string[]> = {
     'design-systems': ['teradata', 'bd', 'rimini'],
-    'healthcare-ux': ['bd', 'bisvine', 'myhealthevet', 'servicenow'],
+    'healthcare-ux': ['bd', 'bisvine', 'myhealthevet'],
     'ai-workflows': ['rimini', 'teradata'],
     'angular-front-end': ['teradata', 'bd', 'servicenow', 'dealersocket', 'snh-ncc'],
     'automotive-crm': ['snh-ncc', 'dealersocket'],

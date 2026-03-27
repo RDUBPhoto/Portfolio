@@ -124,9 +124,9 @@ export class AiChatService {
     if (this.matchesAny(input, ['healthcare', 'clinical', 'ehr', 'patient', 'wcag', 'accessibility'])) {
       return {
         filter: 'healthcare-ux',
-        relatedProjectIds: ['bd', 'bisvine', 'myhealthevet', 'servicenow'],
+        relatedProjectIds: ['bd', 'bisvine', 'myhealthevet'],
         response:
-          'These are the strongest healthcare-aligned examples from Robert’s work: BD, Bisvine EHR, MyHealtheVet, and ServiceNow workflows. They focus on regulated UX, clarity under pressure, and persona-led flow design.',
+          'These are the strongest healthcare-aligned examples from Robert’s work: BD, Bisvine EHR, and MyHealtheVet. They focus on regulated UX, clarity under pressure, and persona-led flow design.',
         restricted: false
       };
     }
