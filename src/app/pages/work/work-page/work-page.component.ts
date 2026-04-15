@@ -406,9 +406,14 @@ export class WorkPageComponent implements OnInit, OnChanges {
     return (this.activeImageIndexByEntryId[entry.id] ?? 0) === imageIndex;
   }
 
-  openModal(entry: WorkEntry, imageIndex: number): void {
+  openModal(entry: WorkEntry, imageIndex?: number): void {
+    const safeIndex =
+      typeof imageIndex === 'number' && Number.isFinite(imageIndex)
+        ? Math.min(Math.max(imageIndex, 0), Math.max(entry.images.length - 1, 0))
+        : 0;
+
     this.modalEntryId = entry.id;
-    this.modalImageIndex = imageIndex;
+    this.modalImageIndex = safeIndex;
   }
 
   closeModal(): void {
@@ -435,7 +440,11 @@ export class WorkPageComponent implements OnInit, OnChanges {
 
   getModalImage(): string {
     const entry = this.getModalEntry();
-    return entry ? entry.images[this.modalImageIndex] : '';
+    if (!entry || entry.images.length === 0) {
+      return '';
+    }
+
+    return entry.images[this.modalImageIndex] ?? entry.images[0];
   }
 
   getModalCompany(): string {

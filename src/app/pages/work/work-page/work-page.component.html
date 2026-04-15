@@ -38,7 +38,7 @@
           <button
             class="hero-shot-button"
             type="button"
-            (click)="openModal(entry, activeImageIndexByEntryId[entry.id])"
+            (click)="openModal(entry, activeImageIndexByEntryId[entry.id] ?? 0)"
             [attr.aria-label]="'Open larger image for ' + entry.company"
           >
             <img class="hero-shot" [src]="getActiveImage(entry)" [alt]="entry.company + ' UI example'" />
