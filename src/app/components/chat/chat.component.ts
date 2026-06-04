@@ -32,6 +32,7 @@ export class ChatComponent implements AfterViewChecked {
   messages: ChatMessage[] = [];
   private seededContextKey = '';
   private lastRenderedStateKey = '';
+  private readonly responseRevealDelayMs = 350;
   @ViewChildren('chatBody') chatBodies?: QueryList<ElementRef<HTMLElement>>;
 
   suggestedPrompts = [
@@ -90,19 +91,21 @@ export class ChatComponent implements AfterViewChecked {
         const shouldAnnounceMap = this.mode === 'hero' && shouldMapWork;
         const assistantReply = shouldAnnounceMap ? `${response} I'll pull up the most relevant work examples now.` : response;
 
-        this.aiService.addMessage({ role: 'assistant', content: assistantReply, action: intent.action });
-        this.loading = false;
-        this.scrollChatToBottom();
+        setTimeout(() => {
+          this.aiService.addMessage({ role: 'assistant', content: assistantReply, action: intent.action });
+          this.loading = false;
+          this.scrollChatToBottom();
 
-        if (shouldMapWork) {
-          setTimeout(() => {
-            this.openWork.emit({
-              prompt,
-              filter: intent.filter,
-              response
-            });
-          }, 850);
-        }
+          if (shouldMapWork) {
+            setTimeout(() => {
+              this.openWork.emit({
+                prompt,
+                filter: intent.filter,
+                response
+              });
+            }, 850);
+          }
+        }, this.responseRevealDelayMs);
       },
       error: () => {
         this.aiService.addMessage({ role: 'assistant', content: 'Oops! Something went wrong.' });

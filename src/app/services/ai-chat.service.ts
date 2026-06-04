@@ -1,7 +1,5 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, catchError, map, of } from 'rxjs';
-import { environment } from '../../environments/environment';
+import { Observable, of } from 'rxjs';
 import { PORTFOLIO_AI_CONTEXT } from '../data/portfolio-ai-context';
 
 export type PortfolioIntent = {
@@ -39,7 +37,6 @@ export type ChatMessage = {
 
 @Injectable({ providedIn: 'root' })
 export class AiChatService {
-  constructor(private http: HttpClient) {}
   readonly conversation: ChatMessage[] = [];
 
   private readonly guardrailReply = PORTFOLIO_AI_CONTEXT.guardrailReply;
@@ -47,24 +44,7 @@ export class AiChatService {
 
   getAiResponse(prompt: string): Observable<string> {
     const intent = this.analyzePrompt(prompt);
-    const agentPrompt = this.buildAgentPrompt(prompt);
-
-    return this.http.post<{ response?: string; message?: string; output?: string }>(`${environment.apiUrl}/api/chat`, { prompt: agentPrompt }).pipe(
-      map(result => {
-        const raw = (result.response || result.message || result.output || '').trim();
-        if (!raw) {
-          return intent.response;
-        }
-
-        // If prompt is Robert-specific but backend still returns generic guardrail, use local trusted answer.
-        if (!intent.restricted && this.looksLikeGuardrail(raw)) {
-          return intent.response;
-        }
-
-        return raw;
-      }),
-      catchError(() => of(intent.response))
-    );
+    return of(intent.response);
   }
 
   addMessage(message: ChatMessage): void {
@@ -108,6 +88,96 @@ export class AiChatService {
           filter: 'enterprise-platform',
           prompt: 'Show how Robert applies this mindset to cross-functional product delivery'
         }
+      };
+    }
+
+    if (this.matchesAny(input, ['rimini', 'vistalumina', 'w-9', 'erp'])) {
+      return {
+        filter: 'ai-workflows',
+        relatedProjectIds: ['rimini'],
+        response:
+          'At VistaLumina / RiminiStreet, Robert led senior product design and UX engineering for an AI-powered ERP in Angular 19+. The work included conversational UX, ServiceNow/SAP-connected workflows, AI onboarding, document intelligence for scanned and handwritten W-9s, and token-based design system foundations.',
+        restricted: false
+      };
+    }
+
+    if (this.matchesAny(input, ['teradata'])) {
+      return {
+        filter: 'design-systems',
+        relatedProjectIds: ['teradata'],
+        response:
+          'At Teradata, Robert worked as a Design Systems Architect and Front-End Developer, leading multi-brand design system architecture across Figma and Angular. He implemented CSS variable token architecture for brand switching, dark mode, accessibility alignment, and scalable Storybook/Napsack handoff.',
+        restricted: false
+      };
+    }
+
+    if (this.matchesAny(input, ['bd', 'carefusion', 'care fusion'])) {
+      return {
+        filter: 'healthcare-ux',
+        relatedProjectIds: ['bd'],
+        response:
+          'At BD/CareFusion, Robert served as a Senior Lead Product Designer and Front-End Architect across global healthcare platforms. He led multi-brand design systems, built atomic Angular component libraries, standardized accessibility and theming, and supported HIPAA-aligned internal product experiences.',
+        restricted: false
+      };
+    }
+
+    if (this.matchesAny(input, ['servicenow', 'service now'])) {
+      return {
+        filter: 'enterprise-platform',
+        relatedProjectIds: ['servicenow'],
+        response:
+          'At ServiceNow, Robert worked as a senior UI designer and front-end developer, creating scalable style-guide systems and reusable SCSS components for workflow products including Visual Task Boards.',
+        restricted: false
+      };
+    }
+
+    if (this.matchesAny(input, ['dealersocket', 'dealer socket'])) {
+      return {
+        filter: 'automotive-crm',
+        relatedProjectIds: ['dealersocket'],
+        response:
+          'At DealerSocket, Robert led CRM redesign work across UX and front-end implementation, modernizing legacy flows with responsive Angular, SCSS, and Kendo/Telerik patterns for automotive sales teams.',
+        restricted: false
+      };
+    }
+
+    if (this.matchesAny(input, ['maintenance net', 'maintenancenet', 'cisco', 'serviceexchange', 'service exchange'])) {
+      return {
+        filter: 'enterprise-platform',
+        relatedProjectIds: ['cisco'],
+        response:
+          'At MaintenanceNet/Cisco, Robert designed and developed ServiceExchange quoting and contract workflow interfaces, with emphasis on cross-browser UX, prototyping, and high-performance enterprise workflows.',
+        restricted: false
+      };
+    }
+
+    if (this.matchesAny(input, ['bisvine', 'emr', 'ehr'])) {
+      return {
+        filter: 'healthcare-ux',
+        relatedProjectIds: ['bisvine'],
+        response:
+          'BisVine is Robert’s healthcare EMR/EHR example for allied health practices, including acupuncture, chiropractic, and massage. The work focused on accessible workflows, clear clinical information structure, and modern healthcare UX.',
+        restricted: false
+      };
+    }
+
+    if (this.matchesAny(input, ['myhealthevet', 'my health e vet', 'veteran'])) {
+      return {
+        filter: 'gov-healthcare',
+        relatedProjectIds: ['myhealthevet'],
+        response:
+          'MyHealtheVet is Robert’s government healthcare UX example, focused on accessible service clarity, veteran-facing information architecture, and persona-aware flows for public-sector healthcare experiences.',
+        restricted: false
+      };
+    }
+
+    if (this.matchesAny(input, ['trowe', 't rowe', 't. rowe', 't rowe price'])) {
+      return {
+        filter: 'fintech',
+        relatedProjectIds: ['trowe'],
+        response:
+          'Trowe is Robert’s fintech-focused product UI example, highlighting planning UX, confidence-building data presentation, and persona segmentation for investment and portfolio planning experiences.',
+        restricted: false
       };
     }
 
@@ -181,7 +251,7 @@ export class AiChatService {
       };
     }
 
-    if (this.matchesAny(input, ['servicenow', 'enterprise', 'platform', 'operations'])) {
+    if (this.matchesAny(input, ['enterprise', 'platform', 'operations'])) {
       return {
         filter: 'enterprise-platform',
         relatedProjectIds: ['servicenow', 'cisco', 'rimini'],
@@ -227,30 +297,4 @@ export class AiChatService {
     return terms.some(term => input.includes(term));
   }
 
-  private looksLikeGuardrail(content: string): boolean {
-    const normalized = content.toLowerCase();
-    return normalized.includes("i'm trained to talk only") || normalized.includes("only answer based on robert");
-  }
-
-  private buildAgentPrompt(userPrompt: string): string {
-    return `
-You are Robert Wojtow's portfolio AI assistant.
-
-Hard guardrails:
-- You may only answer based on Robert's known career history and personal profile below.
-- If user asks general knowledge unrelated to Robert, reply with this exact message:
-  "${this.guardrailReply}"
-- Do not fabricate companies, roles, dates, or personal facts.
-- Keep answers concise and confident.
-
-Known career profile:
-${PORTFOLIO_AI_CONTEXT.careerProfile.map(line => `- ${line}`).join('\n')}
-
-Known personal profile:
-${PORTFOLIO_AI_CONTEXT.personalProfile.map(line => `- ${line}`).join('\n')}
-
-User question:
-${userPrompt}
-`.trim();
-  }
 }

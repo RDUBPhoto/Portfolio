@@ -10,6 +10,11 @@
 
   <ng-container *ngIf="mode === 'hero'; else dockLayout">
     <div #chatBody class="chat-body hero-chat-body" [class.has-messages]="messages.length > 0">
+      <article *ngIf="messages.length === 0 && !loading" class="empty-chat-welcome" aria-label="Portfolio AI welcome">
+        <strong>Welcome to my portfolio site.</strong>
+        <span>Tell me what you want to know about my UX work, design systems, AI workflows, or background.</span>
+      </article>
+
       <article
         *ngFor="let message of messages"
         class="message"
@@ -27,8 +32,11 @@
         </button>
       </article>
 
-      <article *ngIf="loading" class="message assistant typing">
-        <span></span><span></span><span></span>
+      <article *ngIf="loading" class="message assistant thinking" aria-live="polite">
+        <span class="thinking-label">Thinking through Robert's work</span>
+        <span class="typing" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </span>
       </article>
     </div>
 
@@ -59,6 +67,11 @@
 
   <ng-template #dockLayout>
     <div #chatBody class="chat-body" [class.has-messages]="messages.length > 0">
+      <article *ngIf="messages.length === 0 && !loading" class="empty-chat-welcome compact" aria-label="Portfolio AI welcome">
+        <strong>Welcome to my portfolio site.</strong>
+        <span>Ask me about my projects, UX process, design systems, or AI workflow experience.</span>
+      </article>
+
       <article
         *ngFor="let message of messages"
         class="message"
@@ -76,8 +89,11 @@
         </button>
       </article>
 
-      <article *ngIf="loading" class="message assistant typing">
-        <span></span><span></span><span></span>
+      <article *ngIf="loading" class="message assistant thinking" aria-live="polite">
+        <span class="thinking-label">Thinking through Robert's work</span>
+        <span class="typing" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </span>
       </article>
     </div>
 

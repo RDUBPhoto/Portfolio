@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 282.3 185.3">
+  <!-- Generator: Adobe Illustrator 29.3.1, SVG Export Plug-In . SVG Version: 2.1.0 Build 151)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: none;
+        stroke: #4d4d4e;
+        stroke-miterlimit: 10;
+      }
+
+      .st1 {
+        fill: #4d4d4e;
+        font-size: 80.7px;
+      }
+
+      .st1, .st2 {
+        font-family: WalkwayBlack, 'Walkway Black';
+      }
+
+      .st2 {
+        fill: #f28a21;
+        font-size: 101.7px;
+      }
+    </style>
+  </defs>
+  <text class="st2" transform="translate(80 107.6)"><tspan x="0" y="0">DUB</tspan></text>
+  <text class="st2" transform="translate(0 107.6)"><tspan x="0" y="0">R</tspan></text>
+  <text class="st1" transform="translate(80 170.9)"><tspan x="0" y="0">Photo</tspan></text>
+  <line class="st0" x1="71.3" x2="71.3" y2="150"/>
+</svg>
