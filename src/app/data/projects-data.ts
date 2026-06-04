@@ -15,11 +15,11 @@ export const PROJECTS: Project[] = [
     tags: ["design-system", "multi-brand", "storybook", "figma", "accessibility"],
     description: `Multi-theme design system and UI library across Teradata’s enterprise product lines. Token-based theming, Figma integration, and WCAG-compliant components.`,
     images: [
-      "assets/projects/teradata/teradata-3.png",
-      "assets/projects/teradata/teradata-4.png",
-      "assets/projects/teradata/teradata-5.png",
-      "assets/projects/teradata/teradata-1.png",
-      "assets/projects/teradata/teradata-2.png",
+      "assets/projects/teradata/teradata-3.webp",
+      "assets/projects/teradata/teradata-4.webp",
+      "assets/projects/teradata/teradata-5.webp",
+      "assets/projects/teradata/teradata-1.webp",
+      "assets/projects/teradata/teradata-2.webp",
     ]
   },
   {
@@ -29,12 +29,12 @@ export const PROJECTS: Project[] = [
     tags: ["design-system", "WCAG", "Figma", "Storybook", "CI/CD", "theme-tokens"],
     description: `Design system spanning 10+ internal platforms for BD, including token-based theming, dynamic brand switching, and HIPAA/WCAG compliance.`,
     images: [
-      "assets/projects/bd/bd-5.png",
-      "assets/projects/bd/bd-1.png",
-      "assets/projects/bd/bd-2.png",
-      "assets/projects/bd/bd-3.png",
-      "assets/projects/bd/bd-4.png",
-      "assets/projects/bd/bd-6.png"
+      "assets/projects/bd/bd-5.webp",
+      "assets/projects/bd/bd-1.webp",
+      "assets/projects/bd/bd-2.webp",
+      "assets/projects/bd/bd-3.webp",
+      "assets/projects/bd/bd-4.webp",
+      "assets/projects/bd/bd-6.webp"
     ]
   },
   {
@@ -76,12 +76,12 @@ export const PROJECTS: Project[] = [
     tags: ["EMR", "EHR", "WCAG", "Figma", "Vue"],
     description: `An electronic medical records system designed for acupuncture, chiropractic, and massage practices, built with accessibility and modern UX in mind.`,
     images: [
-      "assets/projects/bisvine/bisvine-1.png",
-      "assets/projects/bisvine/bisvine-2.png",
-      "assets/projects/bisvine/bisvine-3.png",
-      "assets/projects/bisvine/bisvine-4.png",
-      "assets/projects/bisvine/bisvine-5.png",
-      "assets/projects/bisvine/bisvine-6.png"
+      "assets/projects/bisvine/bisvine-1.webp",
+      "assets/projects/bisvine/bisvine-2.webp",
+      "assets/projects/bisvine/bisvine-3.webp",
+      "assets/projects/bisvine/bisvine-4.webp",
+      "assets/projects/bisvine/bisvine-5.webp",
+      "assets/projects/bisvine/bisvine-6.webp"
     ]
   },
   {
